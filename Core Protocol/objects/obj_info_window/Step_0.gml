@@ -41,8 +41,3 @@ if (is_dragging) {
     }
 }
 
-if (mouse_check_button_pressed(mb_right)) {
-    if (mouse_x >= x && mouse_x <= x + width && mouse_y >= y && mouse_y <= y + height) {
-        instance_destroy();
-    }
-}
