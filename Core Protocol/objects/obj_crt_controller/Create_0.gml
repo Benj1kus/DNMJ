@@ -18,10 +18,11 @@ my_crt = new CRT({
     },
     lines: {
         image_softness: 1.0,
-        brightness: 2.2,
+        brightness: 3,
         min_sigma: 0.2,
         max_sigma: 0.45,
-        deconvergence: 0.15
+        deconvergence: 0.15,
+		do_interlace: 1
     },
     bloom: {
         strength: 3,
@@ -30,9 +31,11 @@ my_crt = new CRT({
     ntsc: {
         enabled: true, // Если не нужен эффект «старого ТВ кабеля» с помехами
         chroma_smear: 5,
-        cable_noise: 0.05
+        cable_noise: 0.05,
+		color_saturation: 2.2,
+		notch_filter_scale: 1.1
     }
 });
 
-// Обязательно вызовите это после создания, чтобы применить настройки к шейдеру
+
 my_crt.set_shader(shd_pass_crt);

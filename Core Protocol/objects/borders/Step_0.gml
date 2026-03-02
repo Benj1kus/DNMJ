@@ -32,3 +32,18 @@ if (_mx >= 0 && _mx < _sw && _my >= 0 && _my < _sh) {
 } else {
     visible = false;
 }
+
+if (mouse_check_button_pressed(mb_left) && visible) {
+    if (!instance_exists(tab_obj)) {
+        var _spawn_x = mouse_x + 20;
+        var _spawn_y = mouse_y - 20;
+        
+        // Используем instance_create_depth, чтобы вынести меню на передний план (depth -1000)
+        instance_create_depth(_spawn_x, _spawn_y, -1000, tab_obj);
+        instance_create_depth(_spawn_x, _spawn_y, -1001, close_obj);
+        instance_create_depth(_spawn_x, _spawn_y, -1001, skull_obj);
+        instance_create_depth(_spawn_x, _spawn_y, -1001, info_obj);
+        
+        show_debug_message("Меню создано!"); // Это покажет сообщение внизу в консоли, если код сработал
+    }
+}
