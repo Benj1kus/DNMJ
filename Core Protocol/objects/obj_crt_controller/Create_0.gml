@@ -17,7 +17,7 @@ my_crt = new CRT({
         do_int_scale: false
     },
     lines: {
-        image_softness: 1.0,
+        image_softness: 1.5,
         brightness: 3,
         min_sigma: 0.2,
         max_sigma: 0.45,
