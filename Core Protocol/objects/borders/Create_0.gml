@@ -86,3 +86,7 @@ add_c(255, 238, 0, vancvr);
 add_c(0, 241, 255, venezuela);
 add_c(167, 0, 0, westafrika);
 add_c(114, 0, 98, yakut);
+
+
+
+global.window_depth = -2000;

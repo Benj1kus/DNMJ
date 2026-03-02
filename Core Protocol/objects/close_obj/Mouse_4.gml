@@ -1,3 +1,12 @@
+// Перед удалением кнопок, просим их закрыть свои окна
+with (skull_obj) {
+    if (instance_exists(my_window)) instance_destroy(my_window);
+}
+with (info_obj) {
+    if (instance_exists(my_window)) instance_destroy(my_window);
+}
+
+
 // Заставляем окно начать анимацию закрытия
 with (tab_obj) {
     sprite_index = tab_close;
