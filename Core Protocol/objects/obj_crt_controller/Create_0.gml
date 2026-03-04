@@ -17,7 +17,7 @@ my_crt = new CRT({
         do_int_scale: false
     },
     lines: {
-        image_softness: 1.5,
+        image_softness: 2,
         brightness: 3,
         min_sigma: 0.2,
         max_sigma: 0.45,
@@ -25,12 +25,12 @@ my_crt = new CRT({
 		do_interlace: 1
     },
     bloom: {
-        strength: 3,
-        passes: 2
+        strength: 5,
+        passes: 3
     },
     ntsc: {
         enabled: true, // Если не нужен эффект «старого ТВ кабеля» с помехами
-        chroma_smear: 5,
+        chroma_smear: 1,
         cable_noise: 0.05,
 		color_saturation: 2.2,
 		notch_filter_scale: 1.1

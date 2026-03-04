@@ -1,8 +1,16 @@
-// Твои настройки масштаба
-map_scale_x = 3.285714;
-map_scale_y = 3.305085;
+// Базовые настройки масштаба (сохраняем твои оригинальные значения)
+base_scale_x = 3.285714;
+base_scale_y = 3.305085;
 
-// Сразу масштабируем сам объект подсветки
+// Настройки зума
+zoom_level = 1.0;  // Текущий зум
+zoom_min = 1;    // Максимальное отдаление (0.5 = 50% от оригинала)
+zoom_max = 5.0;    // Максимальное приближение (5.0 = в 5 раз ближе)
+
+// Рассчитываем стартовый масштаб
+map_scale_x = base_scale_x * zoom_level;
+map_scale_y = base_scale_y * zoom_level;
+
 image_xscale = map_scale_x;
 image_yscale = map_scale_y;
 
@@ -18,7 +26,7 @@ function add_c(_r, _g, _b, _sprite, _name) {
     };
 }
 
-// --- СПИСОК СТРАН (БЕЗ spr_) ---
+// --- СПИСОК СТРАН ---
 add_c(255, 181, 0, alaska,"Alaska");
 add_c(167, 0, 156, alger,"Algeria");
 add_c(0, 51, 255, amazona,"Amazonas");
@@ -88,7 +96,5 @@ add_c(255, 238, 0, vancvr,"Vancouver");
 add_c(0, 241, 255, venezuela,"Venezuela");
 add_c(167, 0, 0, westafrika,"West Afrika");
 add_c(114, 0, 98, yakut,"Yakutia");
-
-
 
 global.window_depth = -2000;
